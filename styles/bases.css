@@ -1,0 +1,39 @@
+:root{
+    --background: #181818;
+    --moon: #f5f5f5;
+    --mancha: #dbdbdb;
+    --white: #FFFFFF;
+    --purple: #8461a8;
+    --shadow-moon: #a35f61;
+    --font: "Quicksand", sans-serif;
+}
+
+body{
+    background-color: var(--background);
+    font-family: var(--font);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    min-height: 100vh;
+}
+
+::selection{
+    background-color: var(--shadow-moon);
+    color: var(--white);
+}
+
+input:focus,
+input{
+    font-family: var(--font);
+
+    border: none;
+    outline: none;
+}
+
+a:focus,
+.input_btn:focus{
+    outline: none;
+    opacity: .5;
+}

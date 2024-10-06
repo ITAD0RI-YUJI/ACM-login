@@ -1,0 +1,240 @@
+.container_div--draw{
+    /* background-color: rgb(44, 44, 44); */
+    position: relative;
+    
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+.moon{
+    width: 48%;
+    height: 32%;
+
+    overflow: hidden;
+
+    border-radius: 50%;
+    background-color: var(--moon);
+
+    box-shadow: var(--shadow-moon) 2px 2px;
+}
+
+.moon_mancha{
+    background-color: var(--mancha);
+}
+
+/* primera mancha de la luna */
+
+.moon_mancha:first-child{
+    position: relative;
+    top: 100px;
+
+    width: 50%;
+    height: 30px;
+
+    border-radius: 0 8px 8px 0;
+    animation: appear  1s alternate infinite;
+}
+
+.mancha_span--uno{
+    position: relative;
+    right: -60px;
+    top: 10px;
+
+    display: block;
+
+    width: 18px;
+    height: 8px;
+
+    border-radius: 15px 0 0 15px;
+    background-color: var(--moon);
+}
+
+.mancha_span--uno::after{
+    content: '';
+    position: absolute;
+
+    right: 5px;
+    top: -10px;
+
+    background-color: var(--mancha);
+    width: 10px;
+    height: 10px;
+
+    box-shadow: var(--moon) 8px 0;
+    border-radius: 0 50px 50px 0;
+}
+
+.mancha_span--uno::before{
+    content: '';
+    position: absolute;
+
+    right: -5px;
+    bottom: -12px;
+
+    background-color: var(--mancha);
+    width: 18px;
+    height: 12px;
+
+    border-radius: 0 50px 50px 0;
+}
+
+
+/* mancha dos de la luna */
+
+.moon_mancha:last-child{
+    position: relative;
+    right: -100px;
+
+    background-color: var(--mancha);
+
+    width: 40%;
+    height: 20%;
+
+    border-radius: 10px 0 0 10px;
+
+    margin-top: 0%;
+    
+    animation: appear  1s  1s alternate infinite;
+}
+
+.mancha_span--dos{
+    position: relative;
+    left: 0;
+    top: 10px;
+
+    display: block;
+
+    width: 18px;
+    height: 8px;
+
+    border-radius: 0 15px 15px 0;
+    background-color: var(--moon);
+}
+
+.mancha_span--dos::after{
+    content: '';
+    position: absolute;
+
+    right: 10px;
+    top: -10px;
+
+    background-color: var(--mancha);
+    width: 13px;
+    height: 10px;
+
+    box-shadow: var(--moon) -8px 0;
+    border-radius: 50px 0 0 50px;
+}
+
+.mancha_span--dos::before{
+    content: '';
+    position: absolute;
+
+    bottom: -11px;
+
+    background-color: var(--mancha);
+    width: 12px;
+    height: 11px;
+
+
+    box-shadow: var(--moon) -8px 0;
+    border-radius: 50px 0 0 50px;
+}
+
+@keyframes appear {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: .6;
+    }
+}
+
+
+/* contenedor del nombre */
+
+.container_name{
+    text-align: center;
+
+    /* background-color: rebeccapurple; */
+}
+
+.name{
+    color: var(--white);
+    font-size: 25px;
+    letter-spacing: 8px;
+}
+
+.name_span{
+    line-height: 30px;
+    color: var(--purple);
+}
+
+
+/* strellas */
+
+.strella{
+    display: block;
+    position: absolute;
+
+    background-color: rgb(150, 150, 150);
+    border-radius: 50%;
+}
+
+.strella_grande{
+    width: 5px;
+    height: 5px;
+}
+
+.strella_peque{
+    width: 3px;
+    height: 3px;
+}
+
+.strella:nth-child(1){
+    top: 15px;
+    animation: titilar 1s 1s alternate infinite;
+}
+
+.strella:nth-child(2){
+    top: 110px;
+    left: 20px;
+    animation: titilar 1s .6s alternate infinite;
+}
+
+.strella:nth-child(3){
+    top: 0;
+    right: 20px;
+    animation: titilar 1s .2s alternate infinite;
+}
+
+.strella:nth-child(4){
+    top: 250px;
+    left: 55px;
+    animation: titilar 1s .5s alternate infinite;
+}
+
+.strella:nth-child(5){
+    top: 200px;
+    right: 50px;
+    animation: titilar 1s .6s alternate infinite;
+}
+
+.strella:nth-child(6){
+    top: 300px;
+    right: 150px;
+    animation: titilar 1s 1s alternate infinite;
+}
+
+@keyframes titilar {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: .2;
+    }
+}

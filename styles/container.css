@@ -1,0 +1,15 @@
+.container{
+    display: flex;
+    align-items: center;
+
+    width: 650px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.container_div{
+    width: 50%;
+    height: 480px;
+
+    display: flex;
+}
